@@ -77,7 +77,7 @@ function deleteProduct (productIndex) {
 function searchProducts(term){
     var searchProducts=[];
  for(var i=0 ; i< productContainer.length ; i++)
- if(productContainer[i].nameValue.toLowerCase.includes(term.toLowerCase())==true)
+ if(productContainer[i].nameValue.toLowerCase().includes(term.toLowerCase())==true)
  searchProducts.push(productContainer[i]);
  displayProducts(searchProducts) 
     };
