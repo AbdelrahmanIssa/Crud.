@@ -15,7 +15,7 @@ displayProducts(productContainer);
 
 
 function addProduct (){
- 
+ if (validateProductName()){
     var newProduct = {
 
         nameValue: pNameElement.value,
@@ -28,7 +28,9 @@ function addProduct (){
     localStorage.setItem("products", JSON.stringify( productContainer ));
     displayProducts(productContainer);
     clear();
-};
+}
+}
+
 
 
 function displayProducts(productList){
@@ -105,5 +107,13 @@ clear()
 localStorage.setItem("products", JSON.stringify( productContainer ));
 mainBtn.innerHTML=`<button  onclick="addProduct()" class="btn btn-info text-white">  Add product  </button>`
 displayProducts(productContainer)
+
+}
+
+function validateProductName(){
+   var regex = /^[a-z]{1}/i;
+   if(regex.test(pNameElement.value))
+   {return true;}
+   else{alert(`Please start your product name input by a letter`)}   
 
 }
