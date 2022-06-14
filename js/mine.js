@@ -16,7 +16,8 @@ displayProducts(productContainer);
 
 function addProduct (){
  if (validateProductName()){
-    var newProduct = {
+
+        var newProduct = {
 
         nameValue: pNameElement.value,
         priceValue: pPriceElement.value,  
@@ -30,6 +31,7 @@ function addProduct (){
     clear();
 }
 }
+
 
 
 
@@ -109,6 +111,8 @@ mainBtn.innerHTML=`<button  onclick="addProduct()" class="btn btn-info text-whit
 displayProducts(productContainer)
 
 }
+
+
 
 function validateProductName(){
    var regex = /^[a-z]{1}/i;
